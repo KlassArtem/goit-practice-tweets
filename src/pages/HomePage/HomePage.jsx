@@ -1,17 +1,12 @@
-import { Link } from "react-router-dom";
-import s from "./HomePage.module.scss";
+import { Title } from './HomePage.styled';
+import { Box } from '../../components/Box/Box';
 
-function HomePage() {
+const HomePage = () => {
   return (
-    <section className={s.homeSection}>
-      <h1 className={s.wrapper}>
-        This is HomePage! I have no fantasy to create something special =)
-      </h1>
-      <Link to={"/tweets"} className={s.link}>
-        See all users{" "}
-      </Link>
-    </section>
+    <Box display="flex" height="100vh" justifyContent="center" alignItems="center">
+      <Title>Hey, this is Tweets!</Title>
+    </Box>
   );
-}
+};
 
 export default HomePage;
