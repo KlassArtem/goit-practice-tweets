@@ -102,10 +102,19 @@ export const Button = styled.button`
   border-radius: ${p => p.theme.radii.small};
   box-shadow: ${p => p.theme.shadows.btn};
 
-  &:hover,
-  &:focus {
+  transition: all 0.3s ease-in-out;
+
+  &:hover
+   {
     background-color: ${p =>
       p.isFollowing ? p.theme.colors.greenAccentHover : p.theme.colors.greyVioletHover};
     box-shadow: ${p => p.theme.shadows.btnHover};
+    transform: scale(0.9);
   }
-`;
+;
+&:focus {
+  background-color: ${p =>
+    p.isFollowing ? p.theme.colors.greenAccentHover : p.theme.colors.greyVioletHover};
+}
+
+`

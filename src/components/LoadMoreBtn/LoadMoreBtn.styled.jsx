@@ -9,7 +9,7 @@ export const Button = styled.button`
 
   height: 40px;
   width: 176px;
-
+  animation: pulse 1s infinite;
   font-weight: ${p => p.theme.fontWeights.semiBold};
   font-size: ${p => p.theme.fontSizes.m};
   line-height: ${p => p.theme.lineHeights.body};
@@ -20,9 +20,24 @@ export const Button = styled.button`
   border: ${p => p.theme.borders.LoadMoreBtn};
   border-radius: ${p => p.theme.radii.small};
 
-  &:hover,
-  &:focus {
-    color: ${p => p.theme.colors.greenAccent};
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  transition: all 0.3s ease-in-out;
+  
+  &:hover
+   {
+    background-color: ${p => p.theme.colors.greenAccent};
     border: ${p => p.theme.borders.LoadMoreBtnHover};
+    transform: scale(0.1)
   }
 `;

@@ -61,11 +61,24 @@ export const GoToTweetsBtn = styled.button`
   font-size: ${p => p.theme.fontSizes.m};
   line-height: ${p => p.theme.lineHeights.body};
   text-transform: uppercase;
-
+  animation: pulse 1s infinite;
   color: ${p => p.theme.colors.greyViolet};
   background-color: transparent;
   border: ${p => p.theme.borders.NavBtn};
   border-radius: ${p => p.theme.radii.small};
+  
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
 
   &:hover,
   &:focus {
@@ -90,6 +103,20 @@ export const GoToHomeBtn = styled.button`
   color: ${p => p.theme.colors.greyViolet};
   background-color: ${p => p.theme.colors.violetDark};
   box-shadow: ${p => p.theme.shadows.addLight};
+
+  animation: stretch 3s linear infinite;
+
+  @keyframes stretch {
+    0% {
+      width: 100px; /* начальная ширина кнопки */
+    }
+    50% {
+      width: 150px; /* максимальная ширина кнопки */
+    }
+    100% {
+      width: 100px; /* возвращаем кнопку в исходное состояние */
+    }
+  }
 
   &:hover,
   &:focus {
