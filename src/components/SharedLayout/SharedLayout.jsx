@@ -29,8 +29,8 @@ export const SharedLayout = () => {
 
         {location.pathname === '/tweets' && (
           <Box display="flex" justifyContent="center">
-            <Title>Thrilled you're here</Title>
-            <SubTitle>Tweets are welcoming</SubTitle>
+            <Title>Have a nice day!</Title>
+            <SubTitle>Tweets</SubTitle>
           </Box>
         )}
       </Header>
